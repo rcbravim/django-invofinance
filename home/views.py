@@ -1,17 +1,16 @@
-import imp
-
 from django.shortcuts import render
 from library.methods.helper import Helper
 
 from .forms import IndexForm, RegisterForm
 
-#from .models import User
+#from .models import User  # noqa: E265
 
 
 def handler404(request):
     return render(
         request=request,
-        template_name='home/pages/404.html'
+        template_name='home/pages/404.html',
+        status=404
     )
 
 
@@ -44,7 +43,7 @@ def register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             obj = form.save(commit=False)
-            obj.use_password = Helper().hash_gen(str2hash=obj.use_password)
+            obj.use_password = Helper().hash_gen(obj.use_password)
             obj.use_status = 1
             obj.save()
 
