@@ -1,0 +1,95 @@
+{% include 'home/partials/header.html' %}
+{% load static %}
+
+<body>
+  <div class='account-pages my-5 pt-sm-5'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div class='col-md-8 col-lg-6 col-xl-5'>
+          <div class='card overflow-hidden'>
+            <div class='bg-primary bg-soft'>
+              <div class='row'>
+                <div class='col-7'>
+                  <div class='text-primary p-4'>
+                    <h5 class='text-primary'>Free Register</h5>
+                    <p>Get your free Invo account now.</p>
+                  </div>
+                </div>
+                <div class='col-5 align-self-end'>
+                  <img src="{% static 'home/images/profile-img.png' %}" alt='' class='img-fluid'>
+                </div>
+              </div>
+            </div>
+            <div class='card-body pt-0'> 
+              <div>
+                <a href="{% url 'home:index' %}">
+                  <div class='avatar-md profile-user-wid mb-4'>
+                    <span class='avatar-title rounded-circle bg-light'>
+                      <img src="{% static 'home/images/logo.svg' %}" alt='' height='40'>
+                    </span>
+                  </div>
+                </a>
+              </div>
+              <div class='p-2'>
+                <form class='needs-validation' action='.' novalidate method='post'>
+                  {% csrf_token %}
+                  <div class='mb-3'>
+                    <label for='use_login' class='form-label'>Email</label>
+                    <input type='email' class='form-control valid_email' id='use_login' 
+                      name='use_login' placeholder='Enter email' required>  
+                    <div class='invalid-feedback'>Please enter email</div>
+                  </div>
+                  <div class='mb-3'>
+                    <label for='use_password' class='form-label'>Password</label>
+                    <input type='password' class='form-control valid_pass' id='use_password' 
+                      name='use_password' placeholder='Enter password' required>
+                    <div class='invalid-feedback'>Please enter password</div>
+                  </div>
+                  <div class='mb-3'>
+                    <label for='use_confirm_password' class='form-label'>Confirm password</label>
+                    <input type='password' class='form-control valid_pass_confirm' id='use_confirm_password' 
+                      name='use_confirm_password' placeholder='Enter password confirmation' required>
+                    <div class='invalid-feedback'>Please enter password confirmation</div>       
+                  </div>
+                  <div class='mt-4 d-grid'>
+                    <button class='btn btn-primary waves-effect waves-light' type='submit'>Register</button>
+                  </div>
+                  <div class='mt-3 text-center'>
+                    <a href='#' data-bs-toggle='modal' data-bs-target='.orderdetailsModal' class='text-muted'><i class='mdi mdi-lock me-1'></i> Password rules</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class='mt-4 text-center'>
+            <div>
+              <p>Already have an account ? <a href="{% url 'home:index' %}" class='fw-medium text-primary'> Login</a></p>
+              <p>© <script>document.write(new Date().getFullYear())</script> <i class='mdi mdi-heart text-danger'></i> don't fall asleep.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<!-- Modal -->
+<div class='modal fade orderdetailsModal' tabindex='-1' role='dialog' aria-labelledby='orderdetailsModalLabel' aria-hidden='true'>
+  <div class='modal-dialog modal-dialog-centered' role='document'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h5 class='modal-title' id='orderdetailsModalLabel'>Password rules</h5>
+        <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+      </div>
+      <div class='modal-body'>
+        <p class='mb-2'>&#9679; Must contain at least ONE number in its composition</p>
+        <p class='mb-2'>&#9679; Must contain at least ONE capital letter in its composition</p>
+        <p class='mb-2'>&#9679; Must contain at least ONE lowercase letter in its composition</p>
+        <p class='mb-2'>&#9679; Must contain at least 8 digits in its composition</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+
+{% include 'home/partials/footer.html' %}
