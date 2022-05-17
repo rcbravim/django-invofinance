@@ -16,6 +16,7 @@ def credentials(payload, key):
         decoded = jwt.decode(
             jwt=payload,
             key=os.environ.get('JWT_SECRET', 'INSECURE'),
-            algorithms=[os.environ.get('JWT_ALGORITHM', 'INSECURE')]
+            algorithms=[os.environ.get('JWT_ALGORITHM', 'INSECURE')],
+            options={'verify_signature': False}
         )
         return decoded[key]

@@ -1,6 +1,7 @@
 from django.urls import path
 
-from home.views import error_view, index_view, register_view, server_error_view
+from home.views import (error_view, index_view, logout_view, register_view,
+                        server_error_view)
 
 app_name = 'home'
 
@@ -9,6 +10,9 @@ urlpatterns = [
     path('index/', index_view.IndexView.as_view()),
     path('', index_view.IndexView.as_view(), name='index'),
     path('index/auth/', index_view.IndexView.as_view(), name='index_auth'),
+
+    # LOGOUT
+    path('logout/', logout_view.LogoutView.as_view(), name='logout'),
 
     # REGISTER
     path('register/', register_view.RegisterView.as_view(), name='register'),

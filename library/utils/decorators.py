@@ -38,8 +38,6 @@ def auth_check(func) -> dict:
                     return redirect('home:index')
                 except Exception as err:
                     print(err)
-                    """ del self.request.session['auth']
-                    return redirect('home:500') """
         else:
             if 'auth' in self.request.session:
                 del self.request.session['auth']
