@@ -20,7 +20,8 @@ from django.urls import include, path
 
 urlpatterns = [
     #path('admin/', admin.site.urls),  # noqa: E265
-    path('', include('home.urls'))
+    path('', include('home.urls')),
+    path('', include('board.urls'))
 ]
 
 urlpatterns += static(prefix=settings.MEDIA_URL,

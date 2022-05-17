@@ -1,0 +1,44 @@
+[
+    {
+        "model": "board.Country",
+        "pk": 1,
+        "fields": {
+            "cou_name": "Brazil",
+            "cou_country_code": "55",
+            "cou_phone_digits": "10-11",
+            "cou_image": "br.svg",
+            "cou_status": 1,
+            "cou_date_created": "2022-05-02 00:00:00.000000",
+            "cou_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.Country",
+        "pk": 2,
+        "fields": {
+            "cou_name": "United States of America",
+            "cou_country_code": "1",
+            "cou_phone_digits": "10",
+            "cou_image": "us.svg",
+            "cou_status": 1,
+            "cou_date_created": "2022-05-02 00:00:00.000000",
+            "cou_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.Country",
+        "pk": 3,
+        "fields": {
+            "cou_name": "Canada",
+            "cou_country_code": "1",
+            "cou_phone_digits": "10",
+            "cou_image": "ca.svg",
+            "cou_status": 1,
+            "cou_date_created": "2022-05-02 00:00:00.000000",
+            "cou_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    }
+]

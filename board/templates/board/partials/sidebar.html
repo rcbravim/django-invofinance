@@ -1,0 +1,40 @@
+<div id='layout-wrapper'>
+  <!-- ========== Left Sidebar Start ========== -->
+  <div class='vertical-menu'>
+    <div data-simplebar class='h-100'>
+      <!--- Sidemenu -->
+      <div id='sidebar-menu'>
+        <!-- Left Menu Start -->
+        <ul class='metismenu list-unstyled' id='side-menu'>
+          <li class='menu-title' key='t-menu'>Menu</li>
+          <li>
+            <a href="{% url 'board:index' %}" class='waves-effect'>
+              <i class='bx bx-home-circle'></i><span key='t-dashboards'>Dashboard</span>
+            </a>
+          </li>
+          <li id='lables-menu'>
+            <a class='has-arrow waves-effect'>
+              <i class='mdi mdi-label-multiple-outline'></i>
+              <span key='t-labels'>Labels</span>
+            </a>
+            <ul class='sub-menu' aria-expanded='false'>
+              <li><a href="{% url 'board:labels_beneficiaries' %}" key='t-beneficiaries'>Beneficiaries</a></li>
+              <li><a href="{% url 'board:labels_categories' %}" key='t-categories'>Categories</a></li>
+              <li><a href="{% url 'board:labels_clients' %}" key='t-clients'>Clients</a></li>
+              <li><a href="{% url 'board:labels_financial' %}" key='t-financial'>Financial</a></li>
+            </ul>
+          </li>
+          <li class='menu-title' key='t-apps'>Account Information</li>
+          <li id='profile-menu'>
+            <a href="{% url 'board:profile' %}" class='waves-effect'>
+              <i class='bx bx-user'></i>
+              <span key='t-profile'>Profile</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Sidebar -->
+    </div>
+  </div>
+  <!-- Left Sidebar End -->
+</div>

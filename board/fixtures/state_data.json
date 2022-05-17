@@ -1,0 +1,1082 @@
+[
+    {
+        "model": "board.State",
+        "pk": 1,
+        "fields": {
+            "country": 1,
+            "sta_name": "Acre",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 2,
+        "fields": {
+            "country": 1,
+            "sta_name": "Alagoas",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 3,
+        "fields": {
+            "country": 1,
+            "sta_name": "Amapá",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 4,
+        "fields": {
+            "country": 1,
+            "sta_name": "Amazonas",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 5,
+        "fields": {
+            "country": 1,
+            "sta_name": "Bahia",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 6,
+        "fields": {
+            "country": 1,
+            "sta_name": "Ceará",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 7,
+        "fields": {
+            "country": 1,
+            "sta_name": "Distrito Federal",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 8,
+        "fields": {
+            "country": 1,
+            "sta_name": "Espírito Santo",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 9,
+        "fields": {
+            "country": 1,
+            "sta_name": "Goiás",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 10,
+        "fields": {
+            "country": 1,
+            "sta_name": "Maranhão",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 11,
+        "fields": {
+            "country": 1,
+            "sta_name": "Mato Grosso",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 12,
+        "fields": {
+            "country": 1,
+            "sta_name": "Mato Grosso do Sul",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 13,
+        "fields": {
+            "country": 1,
+            "sta_name": "Minas Gerais",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 14,
+        "fields": {
+            "country": 1,
+            "sta_name": "Pará",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 15,
+        "fields": {
+            "country": 1,
+            "sta_name": "Paraíba",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 16,
+        "fields": {
+            "country": 1,
+            "sta_name": "Paraná",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 17,
+        "fields": {
+            "country": 1,
+            "sta_name": "Pernambuco",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 18,
+        "fields": {
+            "country": 1,
+            "sta_name": "Piauí",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 19,
+        "fields": {
+            "country": 1,
+            "sta_name": "Rio de Janeiro",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 20,
+        "fields": {
+            "country": 1,
+            "sta_name": "Rio Grande do Norte",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 21,
+        "fields": {
+            "country": 1,
+            "sta_name": "Rio Grande do Sul",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 22,
+        "fields": {
+            "country": 1,
+            "sta_name": "Rondônia",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 23,
+        "fields": {
+            "country": 1,
+            "sta_name": "Roraima",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 24,
+        "fields": {
+            "country": 1,
+            "sta_name": "Santa Catarina",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 25,
+        "fields": {
+            "country": 1,
+            "sta_name": "São Paulo",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 26,
+        "fields": {
+            "country": 1,
+            "sta_name": "Sergipe",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 27,
+        "fields": {
+            "country": 1,
+            "sta_name": "Tocantins",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 28,
+        "fields": {
+            "country": 2,
+            "sta_name": "Alabama",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 29,
+        "fields": {
+            "country": 2,
+            "sta_name": "Alaska",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 30,
+        "fields": {
+            "country": 2,
+            "sta_name": "Arizona",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 31,
+        "fields": {
+            "country": 2,
+            "sta_name": "Arkansas",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 32,
+        "fields": {
+            "country": 2,
+            "sta_name": "California",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 33,
+        "fields": {
+            "country": 2,
+            "sta_name": "Colorado",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 34,
+        "fields": {
+            "country": 2,
+            "sta_name": "Connecticut",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 35,
+        "fields": {
+            "country": 2,
+            "sta_name": "Delaware",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 36,
+        "fields": {
+            "country": 2,
+            "sta_name": "Florida",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 37,
+        "fields": {
+            "country": 2,
+            "sta_name": "Georgia",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 38,
+        "fields": {
+            "country": 2,
+            "sta_name": "Hawaii",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 39,
+        "fields": {
+            "country": 2,
+            "sta_name": "Idaho",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 40,
+        "fields": {
+            "country": 2,
+            "sta_name": "Illinois",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 41,
+        "fields": {
+            "country": 2,
+            "sta_name": "Indiana",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 42,
+        "fields": {
+            "country": 2,
+            "sta_name": "Iowa",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 43,
+        "fields": {
+            "country": 2,
+            "sta_name": "Kansas",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 44,
+        "fields": {
+            "country": 2,
+            "sta_name": "Kentucky",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 45,
+        "fields": {
+            "country": 2,
+            "sta_name": "Louisiana",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 46,
+        "fields": {
+            "country": 2,
+            "sta_name": "Maine",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 47,
+        "fields": {
+            "country": 2,
+            "sta_name": "Maryland",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 48,
+        "fields": {
+            "country": 2,
+            "sta_name": "Massachusetts",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 49,
+        "fields": {
+            "country": 2,
+            "sta_name": "Michigan",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 50,
+        "fields": {
+            "country": 2,
+            "sta_name": "Minnesota",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 51,
+        "fields": {
+            "country": 2,
+            "sta_name": "Mississippi",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 52,
+        "fields": {
+            "country": 2,
+            "sta_name": "Missouri",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 53,
+        "fields": {
+            "country": 2,
+            "sta_name": "Montana",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 54,
+        "fields": {
+            "country": 2,
+            "sta_name": "Nebraska",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 55,
+        "fields": {
+            "country": 2,
+            "sta_name": "Nevada",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 56,
+        "fields": {
+            "country": 2,
+            "sta_name": "New Hampshire",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 57,
+        "fields": {
+            "country": 2,
+            "sta_name": "New Jersey",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 58,
+        "fields": {
+            "country": 2,
+            "sta_name": "New Mexico",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 59,
+        "fields": {
+            "country": 2,
+            "sta_name": "New York",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 60,
+        "fields": {
+            "country": 2,
+            "sta_name": "North Carolina",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 61,
+        "fields": {
+            "country": 2,
+            "sta_name": "North Dakota",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 62,
+        "fields": {
+            "country": 2,
+            "sta_name": "Ohio",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 63,
+        "fields": {
+            "country": 2,
+            "sta_name": "Oklahoma",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 64,
+        "fields": {
+            "country": 2,
+            "sta_name": "Oregon",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 65,
+        "fields": {
+            "country": 2,
+            "sta_name": "Pennsylvania",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 66,
+        "fields": {
+            "country": 2,
+            "sta_name": "Rhode Island",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 67,
+        "fields": {
+            "country": 2,
+            "sta_name": "South Carolina",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 68,
+        "fields": {
+            "country": 2,
+            "sta_name": "South Dakota",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 69,
+        "fields": {
+            "country": 2,
+            "sta_name": "Tennessee",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 70,
+        "fields": {
+            "country": 2,
+            "sta_name": "Texas",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 71,
+        "fields": {
+            "country": 2,
+            "sta_name": "Utah",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 72,
+        "fields": {
+            "country": 2,
+            "sta_name": "Vermont",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 73,
+        "fields": {
+            "country": 2,
+            "sta_name": "Virginia",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 74,
+        "fields": {
+            "country": 2,
+            "sta_name": "Washington",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 75,
+        "fields": {
+            "country": 2,
+            "sta_name": "West Virginia",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 76,
+        "fields": {
+            "country": 2,
+            "sta_name": "Wisconsin",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 77,
+        "fields": {
+            "country": 2,
+            "sta_name": "Wyoming",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 78,
+        "fields": {
+            "country": 3,
+            "sta_name": "Alberta",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 79,
+        "fields": {
+            "country": 3,
+            "sta_name": "British Columbia",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 80,
+        "fields": {
+            "country": 3,
+            "sta_name": "Manitoba",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 81,
+        "fields": {
+            "country": 3,
+            "sta_name": "New Brunswick",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 82,
+        "fields": {
+            "country": 3,
+            "sta_name": "Newfoundland and Labrador",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 83,
+        "fields": {
+            "country": 3,
+            "sta_name": "Nova Scotia",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 84,
+        "fields": {
+            "country": 3,
+            "sta_name": "Ontario",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 85,
+        "fields": {
+            "country": 3,
+            "sta_name": "Prince Edward Island",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 86,
+        "fields": {
+            "country": 3,
+            "sta_name": "Quebec",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 87,
+        "fields": {
+            "country": 3,
+            "sta_name": "Saskatchewan",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 88,
+        "fields": {
+            "country": 3,
+            "sta_name": "Northwest Territories",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 89,
+        "fields": {
+            "country": 3,
+            "sta_name": "Nunavut",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    },
+    {
+        "model": "board.State",
+        "pk": 90,
+        "fields": {
+            "country": 3,
+            "sta_name": "Yukon",
+            "sta_status": 1,
+            "sta_date_created": "2022-05-02 00:00:00.000000",
+            "sta_date_updated": "2022-05-02 00:00:00.000000"
+        }
+
+    }
+]

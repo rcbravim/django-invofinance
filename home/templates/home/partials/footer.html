@@ -1,15 +1,21 @@
 {% load static %}
 
 <!-- JAVASCRIPT -->
-<script src="{% static 'home/libs/jquery/jquery.min.js' %}"></script>
-<script src="{% static 'home/libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'home/libs/metismenu/metisMenu.min.js' %}"></script>
-<script src="{% static 'home/libs/simplebar/simplebar.min.js' %}"></script>
-<script src="{% static 'home/libs/node-waves/waves.min.js' %}"></script>
+<script src="{% static 'global/libs/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'global/libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'global/libs/metismenu/metisMenu.min.js' %}"></script>
+<script src="{% static 'global/libs/simplebar/simplebar.min.js' %}"></script>
+<script src="{% static 'global/libs/node-waves/waves.min.js' %}"></script>
+
+<!-- controllers -->
+<script src="{% static 'home/js/theme.min.js' %}"></script>
 
 <!-- validation init -->
-<script src="{% static 'home/js/validation.init.js' %}"></script>
+<script src="{% static 'global/js/validation.init.js' %}"></script>
+
+<!-- two-step-verification js -->
+<script src="{% static 'home/js/two-step-verification.init.js' %}"></script>
 
 <!-- App js -->
-<script src="{% static 'home/js/app.js' %}"></script>
+<script src="{% static 'global/js/app.js' %}"></script>
 </html>

@@ -1,0 +1,48 @@
+{% include 'home/partials/head.html' %}
+{% load static %}
+
+<body>
+  <div class='account-pages my-5 pt-sm-5'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-lg-12'>
+          <div class='text-center mb-5 text-muted'>
+            <a href="{% url 'home:index' %}" class='d-block auth-logo'>
+              <img src="{% static 'global/images/full-logo.png' %}" alt='' height='50' class='auth-logo-dark mx-auto'>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- end row -->
+      <div class='row justify-content-center'>
+        <div class='col-md-8 col-lg-6 col-xl-5'>
+          <div class='card'>
+            <div class='card-body'> 
+              <div class='p-2'>
+                <div class='text-center'>
+                  <div class='avatar-md mx-auto'>
+                    <div class='avatar-title rounded-circle bg-light'>
+                      <i class='mdi mdi-alert h1 mb-0 text-primary'></i>
+                    </div>
+                  </div>
+                  <div class='p-2 mt-4'>
+                    <h4 class='text-danger'>Verification failed !</h4>
+                    <p class='text-muted'>Unfortunately, you were unable to verify your registration email, 
+                      but don't worry, go back to the registration page and try again.</p>
+                    <div class='mt-4'>
+                      <a href="{% url 'home:register' %}" class='btn btn-primary'>Back to Register</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='mt-4 text-center'>
+            <p>© <script>document.write(new Date().getFullYear())</script> <i class='mdi mdi-heart text-danger'></i> financial spreadsheet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+{% include 'home/partials/footer.html' %}

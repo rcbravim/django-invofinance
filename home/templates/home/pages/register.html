@@ -1,84 +1,169 @@
-{% include 'home/partials/header.html' %}
+{% include 'home/partials/head.html' %}
 {% load static %}
 
 <body>
   <div class='account-pages my-5 pt-sm-5'>
     <div class='container'>
-      <div class='row justify-content-center'>
-        <div class='col-md-8 col-lg-6 col-xl-5'>
-          <div class='card overflow-hidden'>
-            <div class='bg-primary bg-soft'>
-              <div class='row'>
-                <div class='col-7'>
-                  <div class='text-primary p-4'>
-                    <h5 class='text-primary'>Free Register</h5>
-                    <p>Get your free Invo account now.</p>
+      {% if stage == 'one' %}
+        <div class='row justify-content-center'>
+          <div class='col-md-8 col-lg-6 col-xl-5'>
+            <div class='card overflow-hidden'>
+              <div class='bg-primary bg-soft'>
+                <div class='row'>
+                  <div class='col-7'>
+                    <div class='text-primary p-4'>
+                      <h5 class='text-primary'>Free Register</h5>
+                      <p>Get your free Invo account now.</p>
+                    </div>
+                  </div>
+                  <div class='col-5 align-self-end'>
+                    <img src="{% static 'home/images/profile-img.png' %}" alt='' class='img-fluid'>
                   </div>
                 </div>
-                <div class='col-5 align-self-end'>
-                  <img src="{% static 'home/images/profile-img.png' %}" alt='' class='img-fluid'>
+              </div>
+              <div class='card-body pt-0'> 
+                <div>
+                  <a href="{% url 'home:index' %}">
+                    <div class='avatar-md profile-user-wid mb-2'>
+                      <span class='avatar-title rounded-circle bg-light'>
+                        <img src="{% static 'home/images/logo.svg' %}" alt='' height='40'>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                
+                <div class='p-2'>
+                  {% if error %}
+                    <div class='alert alert-danger' role='alert'>{{ error|safe }}</div>
+                  {% endif %}
+                  <form class='needs-validation' action="{% url 'home:register_new' %}" novalidate method='post'>
+                    {% csrf_token %}
+                    <div class='mb-3'>
+                      <label for='use_login' class='form-label'>Email</label>
+                      <input type='email' class='form-control valid_email' id='use_login' 
+                        name='use_login' placeholder='Enter email' required>  
+                      <div class='invalid-feedback'>Please enter email</div>
+                    </div>
+                    <div class='mb-3'>
+                      <label for='use_password' class='form-label'>Password</label>
+                      <input type='password' class='form-control valid_pass' id='use_password' 
+                        name='use_password' placeholder='Enter password' required>
+                      <div class='invalid-feedback'>Please enter password</div>
+                    </div>
+                    <div class='mb-3'>
+                      <label for='use_confirm_password' class='form-label'>Confirm password</label>
+                      <input type='password' class='form-control valid_pass_confirm' id='use_confirm_password' 
+                        name='use_confirm_password' placeholder='Enter password confirmation' required>
+                      <div class='invalid-feedback'>Please enter password confirmation</div>       
+                    </div>
+                    <div class='mt-4 d-grid'>
+                      <button class='btn btn-primary waves-effect waves-light' type='submit'>Register</button>
+                    </div>
+                    <div class='mt-3 text-center'>
+                      <a href='#' data-bs-toggle='modal' data-bs-target='.passwordRulesModal' class='text-muted'>
+                        <i class='mdi mdi-lock me-1'></i> Password rules
+                      </a>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class='card-body pt-0'> 
+            <div class='mt-4 text-center'>
               <div>
-                <a href="{% url 'home:index' %}">
-                  <div class='avatar-md profile-user-wid mb-4'>
-                    <span class='avatar-title rounded-circle bg-light'>
-                      <img src="{% static 'home/images/logo.svg' %}" alt='' height='40'>
-                    </span>
-                  </div>
-                </a>
+                <p>Already have an account ? <a href="{% url 'home:index' %}" class='fw-medium text-primary'> Login</a></p>
+                <p>© <script>document.write(new Date().getFullYear())</script> <i class='mdi mdi-heart text-danger'></i> financial spreadsheet.</p>
               </div>
-              <div class='p-2'>
-                <form class='needs-validation' action='.' novalidate method='post'>
-                  {% csrf_token %}
-                  <div class='mb-3'>
-                    <label for='use_login' class='form-label'>Email</label>
-                    <input type='email' class='form-control valid_email' id='use_login' 
-                      name='use_login' placeholder='Enter email' required>  
-                    <div class='invalid-feedback'>Please enter email</div>
-                  </div>
-                  <div class='mb-3'>
-                    <label for='use_password' class='form-label'>Password</label>
-                    <input type='password' class='form-control valid_pass' id='use_password' 
-                      name='use_password' placeholder='Enter password' required>
-                    <div class='invalid-feedback'>Please enter password</div>
-                  </div>
-                  <div class='mb-3'>
-                    <label for='use_confirm_password' class='form-label'>Confirm password</label>
-                    <input type='password' class='form-control valid_pass_confirm' id='use_confirm_password' 
-                      name='use_confirm_password' placeholder='Enter password confirmation' required>
-                    <div class='invalid-feedback'>Please enter password confirmation</div>       
-                  </div>
-                  <div class='mt-4 d-grid'>
-                    <button class='btn btn-primary waves-effect waves-light' type='submit'>Register</button>
-                  </div>
-                  <div class='mt-3 text-center'>
-                    <a href='#' data-bs-toggle='modal' data-bs-target='.orderdetailsModal' class='text-muted'><i class='mdi mdi-lock me-1'></i> Password rules</a>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class='mt-4 text-center'>
-            <div>
-              <p>Already have an account ? <a href="{% url 'home:index' %}" class='fw-medium text-primary'> Login</a></p>
-              <p>© <script>document.write(new Date().getFullYear())</script> <i class='mdi mdi-heart text-danger'></i> don't fall asleep.</p>
             </div>
           </div>
         </div>
-      </div>
+      {% elif stage == 'two' %}
+        <div class='row'>
+          <div class='col-lg-12'>
+            <div class='text-center mb-5 text-muted'>
+              <a href="{% url 'home:index' %}" class='d-block auth-logo'>
+                <img src="{% static 'global/images/full-logo.png' %}" alt='' height='50' class='auth-logo-dark mx-auto'>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+        <div class='row justify-content-center'>
+          <div class='col-md-8 col-lg-6 col-xl-5'>
+            <div class='card'>
+              <div class='card-body'>
+                <div class='p-2'>
+                  <div class='text-center'>
+                    <div class='avatar-md mx-auto'>
+                      <div class='avatar-title rounded-circle bg-light'>
+                        <i class='bx bxs-envelope h1 mb-0 text-primary'></i>
+                      </div>
+                    </div>
+                    <div class='p-2 mt-4'>
+                      <h4>Verify your email</h4>
+                      <p class='mb-2'>Please enter the 4 digit code sent to <span class='fw-semibold'>{{ email }}</span></p>
+                      <p class='mb-4 text-danger'>You have <span class='fw-semibold'>{{ attempts }}</span> 
+                        attempt{% if attempts > 1 %}s{% endif %} left</p>
+                      <form class='needs-validation' action="{% url 'home:register_verify' %}" novalidate method='post'>
+                        {% csrf_token %}
+                        <div class='row'>
+                          <div class='col-3'>
+                            <div class='mb-3'>
+                              <label for='digit1-input' class='visually-hidden'>Dight 1</label>
+                              <input type='text' class='form-control form-control-lg text-center valid_digit1'
+                                onkeyup='moveToNext(this, 2)' maxLength='1' name='digit1' id='digit1-input' required>
+                            </div>
+                          </div>
+                          <div class='col-3'>
+                            <div class='mb-3'>
+                              <label for='digit2-input' class='visually-hidden'>Dight 2</label>
+                              <input type='text' class='form-control form-control-lg text-center valid_digit2'
+                                onkeyup='moveToNext(this, 3)' maxLength='1' name='digit2' id='digit2-input' required>
+                            </div>
+                          </div>
+                          <div class='col-3'>
+                            <div class='mb-3'>
+                              <label for='digit3-input' class='visually-hidden'>Dight 3</label>
+                              <input type='text' class='form-control form-control-lg text-center valid_digit3'
+                                onkeyup='moveToNext(this, 4)' maxLength='1' name='digit3' id='digit3-input' required>
+                            </div>
+                          </div>
+                          <div class='col-3'>
+                            <div class='mb-3'>
+                              <label for='digit4-input' class='visually-hidden'>Dight 4</label>
+                              <input type='text' class='form-control form-control-lg text-center valid_digit4'
+                                onkeyup='moveToNext(this, 4)' maxLength='1' name='digit4' id='digit4-input' required>
+                            </div>
+                          </div>
+                        </div>
+                        <div class='invalid-feedback was-validated'>Please enter all the 4 digits</div>
+                        <div class='mt-4 d-grid'>
+                          <button class='btn btn-primary waves-effect waves-light' type='submit'>Confirm</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='mt-4 text-center'>
+              <p>Did't receive a code ? <a href='#' class='fw-medium text-primary'> Resend </a> </p>
+              <p>© <script>document.write(new Date().getFullYear())</script> <i class='mdi mdi-heart text-danger'></i> financial spreadsheet.</p>
+            </div>
+          </div>
+        </div>
+      {% endif %}
     </div>
   </div>
 </body>
 
-<!-- Modal -->
-<div class='modal fade orderdetailsModal' tabindex='-1' role='dialog' aria-labelledby='orderdetailsModalLabel' aria-hidden='true'>
+{% include 'home/partials/footer.html' %}
+
+<!-- passwordRulesModal -->
+<div class='modal fade passwordRulesModal' tabindex='-1' role='dialog' aria-labelledby='passwordRulesModalLabel' aria-hidden='true'>
   <div class='modal-dialog modal-dialog-centered' role='document'>
     <div class='modal-content'>
       <div class='modal-header'>
-        <h5 class='modal-title' id='orderdetailsModalLabel'>Password rules</h5>
+        <h5 class='modal-title' id='passwordRulesModalLabel'>Password rules</h5>
         <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
       </div>
       <div class='modal-body'>
@@ -92,4 +177,32 @@
 </div>
 <!-- end modal -->
 
-{% include 'home/partials/footer.html' %}
+<!-- Modal Control -->
+<input type='hidden' value='{{ modal }}' id='valid_control' disabled/>
+
+<!-- emailValidModal -->
+<div class='modal fade' id='emailValidModal' tabindex='-1' aria-labelledby='emailValidModalLabel' aria-hidden='true'>
+  <div class='modal-dialog modal-dialog-centered'>
+    <div class='modal-content'>
+      <div class='modal-header border-bottom-0'>
+          <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+      </div>
+      <div class='modal-body'>
+        <div class='text-center mb-4'>
+          <div class='avatar-md mx-auto mb-4'>
+            <div class='avatar-title bg-light rounded-circle text-primary h1'>
+              <i class='mdi mdi-email-open'></i>
+            </div>
+          </div>
+          <div class='row justify-content-center'>
+            <div class='col-xl-10'>
+              <h4 class='text-primary'>Missing email validation !</h4>
+              <p class='text-muted font-size-14 mb-4'>Your email has not yet been verified, please complete this step before logging in</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->

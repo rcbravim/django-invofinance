@@ -1,0 +1,318 @@
+{% include 'board/partials/header.html' %}
+{% include 'board/partials/sidebar.html' %}
+
+{% load board_extras %}
+
+<body data-topbar='dark'>
+  <div id='layout-wrapper'>
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class='main-content'>
+      <div class='page-content'>
+        <div class='container-fluid'>
+          <!-- start page title -->
+          <div class='row'>
+            <div class='col-12'>
+              <div class='page-title-box d-sm-flex align-items-center justify-content-between'>
+                <h4 class='mb-sm-0 font-size-18'>Financial Labels</h4>
+                <div class='page-title-right'>
+                  <ol class='breadcrumb m-0'>
+                    <li class='breadcrumb-item'>Labels</li>
+                    <li class='breadcrumb-item active'>Financial</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end page title -->
+
+          <div class='row'>
+            <div class='col-12'>
+              <div class='card'>
+                <div class='card-body'>
+                  <div class='row'>
+                    <div class='col-sm-12'>
+                      <div class='text-sm-end'>
+                        <a class='btn btn-primary waves-effect waves-light mb-3' href="{% url 'board:labels_financial_form' %}">
+                          <i class='mdi mdi-plus'></i> Add Financial
+                        </a>
+                      </div>
+                    </div><!-- end col-->
+                  </div>
+                  <hr class='mt-0 mb-3'>
+                  <form class='form-horizontal' action="{% url 'board:labels_financial' %}" method='get'>
+                    <div class='row mb-3 align-items-end'>
+                      <div class='col-sm-4'>
+                        <div class='mb-3'>
+                          <label for='type'>Type</label>
+                          <select class='form-select select2-search-disable' id='type' name='type'>
+                            <option value='' selected>All types</option>
+                            <option value='2' {% if filter.type == '2' %}selected{% endif %}>Bank Account</option>
+                            <option value='1' {% if filter.type == '1' %}selected{% endif %}>Cost Center</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class='col-sm-6'>
+                        <div class='mb-3'>
+                          <label for='search'>Text Search</label>
+                          <input type='text' class='form-control' id='search' name='search' 
+                            placeholder='Search by cost center, bank name, account or description'
+                            value='{% if filter.search %}{{ filter.search }}{% endif %}'>
+                        </div>
+                      </div>
+                      <div class='col-sm align-self-end'>
+                        <div class='mb-3'>
+                          <div class='text-sm-end d-grid'>
+                            <button type='submit' class='btn btn-primary w-xs'>Search</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  {% if success %}
+                    <div class='alert alert-success mb-4' role='alert'>{{ success }}</div>
+                  {% elif error %}
+                    <div class='alert alert-danger mb-4' role='alert'>{{ error|safe }}</div>
+                  {% endif %}
+                  {% if financial %}
+                    <div class='table-responsive'>
+                      <table class='table align-middle table-nowrap table-check'>
+                        <thead class='table-light'>
+                          <tr>
+                            <th class='align-middle'>Register Date</th>
+                            <th class='align-middle'>Cost Center/Bank Name</th>
+                            <th class='align-middle'>Description/Account</th>
+                            <th class='align-middle'>Type</th>
+                            <th class='align-middle'></th>
+                            <th class='align-middle'></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for row in financial %}
+                            <tr>
+                              <td>{{ row.fin_date_created|date:"M d, Y" }}</td>
+                              <td>
+                                {% if row.fin_type == 1 %}
+                                  {{ row.fin_cost_center|upper }}
+                                {% else %}
+                                  {{ row.fin_bank_name|upper }}
+                                {% endif %}
+                              </td>
+                              <td>
+                                {% if row.fin_type == 1 %}
+                                  {% if row.fin_description %}
+                                    {{ row.fin_description|slice:':30'|upper }}{% if row.fin_description|length > 30 %}...{% endif %}
+                                  {% else %}
+                                    N/A
+                                  {% endif %}
+                                {% else %}
+                                  {{ row.fin_bank_branch }} / {{ row.fin_bank_account }}
+                                {% endif %}
+                              </td>
+                              <td>
+                                {% if row.fin_type == 1 %}
+                                  <span class='badge badge-pill badge-soft-primary font-size-12'>Cost Center</span>
+                                {% else %}
+                                  <span class='badge badge-pill badge-soft-warning font-size-12'>Bank Account</span>
+                                {% endif %}
+                              <td>
+                                <!-- Button trigger modal -->
+                                <button type='button' class='btn btn-primary btn-sm btn-rounded financial_details' 
+                                  data-bs-toggle='modal' data-bs-target='.labelDetailsModal' data-value='{{ row.fin_slug|md5 }}'>
+                                  View Details
+                                </button>
+                              </td>
+                              <td>
+                                <div class='d-flex gap-3'>
+                                  <a data-bs-toggle='modal' data-bs-target='.labelEditModal' data-value='{{ row.fin_slug|md5 }}' 
+                                    class='text-success financial_edit' style='cursor:pointer;'><i class='mdi mdi-pencil font-size-18'></i></a>
+                                  <a data-bs-toggle='modal' data-bs-target='.labelRemoveModal' data-value='{{ row.fin_slug|md5 }}' 
+                                    class='text-danger financial_del' style='cursor:pointer;'><i class='mdi mdi-delete font-size-18'></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                    <form action="{% url 'board:labels_financial' %}" method='get'>
+                      <input type='hidden' name='type' value='{{ filter.type }}'/>
+                      <input type='hidden' name='search' value='{{ filter.search }}'/>
+                      <ul class='pagination pagination-rounded justify-content-end mb-2'>
+                        <li class='page-item {% if pages.pg == 1 %}disabled{% endif %}'>
+                          <button class='page-link' type='submit' name='pg' value='1' aria-label='First'>
+                            <i class='mdi mdi-chevron-double-left'></i>
+                          </button>
+                        </li>
+                        {% for item in pages.pg_range %}
+                          <li class='page-item {% if pages.pg == item %}active{% endif %}'>
+                            <button class='page-link' type='submit' name='pg' value='{{ item }}'>{{ item }}</button>
+                          </li>
+                        {% endfor %}
+                        <li class='page-item {% if pages.pg == pages.total_pg %}disabled{% endif %}'>
+                          <button class='page-link' type='submit' name='pg' value='{{ pages.total_pg }}' aria-label='Last'>
+                            <i class='mdi mdi-chevron-double-right'></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </form>
+                  {% else %}
+                    <div class='table-responsive'>
+                      <div class='card-body'>No registered cost center or bank account.</div>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- container-fluid -->
+      </div>
+      <!-- End Page-content -->
+    </div>
+    <!-- end main content-->
+  </div>
+</body>
+
+{% include 'board/partials/footer.html' %}
+
+<!-- labelDetailsModal -->
+<div class='modal fade labelDetailsModal' tabindex='-1' role='dialog' aria-labelledby='labelDetailsModalLabel' aria-hidden='true'>
+  <div class='modal-dialog modal-dialog-centered' role='document'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h5 class='modal-title' id='labelDetailsModalLabel'>Financial Label Details</h5>
+        <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+      </div>
+      <div class='modal-body'>
+        <div class='form-row col-md d-flex justify-content-between'>
+          <p class='mb-2 modal_register_date'>Register Date: <span class='text-primary'></span></p>
+          <span class='modal_type badge badge-pill font-size-12 mb-2'></span>
+        </div>
+        <div class='d-none' id='cost_center_modal'>
+          <p class='mb-2 modal_cost_center'>Cost Center: <span class='text-primary'></span></p>
+          <p class='mb-2 modal_description d-none'>Description: <span class='text-primary'></span></p>
+        </div>
+        <div class='d-none' id='bank_account_modal'>
+          <p class='mb-2 modal_bank'>Bank Name: <span class='text-primary'></span></p>
+          <p class='mb-2 modal_branch'>Branch Number: <span class='text-primary'></span></p>
+          <p class='mb-2 modal_account'>Account Number: <span class='text-primary'></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end labelDetailsModal -->
+
+<!-- labelEditModal Modal -->
+<div class='modal fade labelEditModal' id='labelEditModal' tabindex='-1' role='dialog' aria-hidden='true'>
+  <div class='modal-dialog modal-dialog-centered' role='document'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h5 class='modal-title'>Edit Client Label</h5>
+        <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+      </div>
+      <form class='needs-validation' method='post' action="{% url 'board:labels_financial_edit' %}" novalidate>
+        {% csrf_token %}
+        <input type='hidden' id='edit_financial' name='edit_financial'/>
+        <div class='modal-body'>
+          <div class='content mt-1'>
+            <div class='d-none cost_center_modal_edit'>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <div class='mb-3'>
+                    <label for='cost_center' class='form-label'>Cost Center Name</label>
+                    <input type='text' class='form-control valid_entry' id='cost_center' name='cost_center'
+                      placeholder='Enter cost center name' required>
+                    <div class='invalid-feedback'>Please provide a cost center name</div>
+                  </div>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <div class='mb-3'>
+                    <label for='description' class='form-label'>Description</label>
+                    <input type='text' class='form-control valid_opt_entry' id='description' name='description'
+                      placeholder='Enter cost center description, if applicable'>
+                    <div class='invalid-feedback'></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='d-none bank_account_modal_edit'>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <div class='mb-3'>
+                    <label for='bank' class='form-label'>Bank Name</label>
+                    <input type='text' class='form-control valid_entry_nd' id='bank' name='bank'
+                      placeholder='Enter bank name' required>
+                    <div class='invalid-feedback'>Please provide a bank name</div>
+                  </div>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <div class='mb-3'>
+                    <label for='branch' class='form-label'>Bank Branch Number</label>
+                    <input type='text' class='form-control mask_number' id='branch' name='branch'
+                      placeholder='Enter bank branch number' required>
+                    <div class='invalid-feedback'>Please provide your bank branch number</div>
+                  </div>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <div class='mb-3'>
+                    <label for='account' class='form-label'>Account Number</label>
+                    <input type='text' class='form-control mask_number' id='account' name='account'
+                      placeholder='Enter account number' required>
+                    <div class='invalid-feedback'>Please provide your account number</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='modal-footer'>
+          <button type='submit' class='btn btn-primary'>Edit Label</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- end labelEditModal -->
+
+<!-- labelRemoveModal Modal -->
+<div class='modal fade labelRemoveModal' id='labelRemoveModal' tabindex='-1' role='dialog' aria-hidden='true'>
+  <div class='modal-dialog modal-dialog-centered' role='document'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h5 class='modal-title'>Remove Financial Label</h5>
+        <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+      </div>
+      <form class='needs-validation' action="{% url 'board:labels_financial_delete' %}" novalidate method='post'>
+        {% csrf_token %}
+        <input type='hidden' id='del_financial' name='del_financial'/>
+        <div class='modal-body'>
+          <p class='mb-4'>Are you sure you want to proceed with the financial label removal?</p>
+          <div class='d-none' id='cost_center_modal_remove'>
+            <p class='mb-2 modal_cost_center'>Cost Center: <span class='text-primary'></span></p>
+            <p class='mb-2 modal_description d-none'>Description: <span class='text-primary'></span></p>
+          </div>
+          <div class='d-none' id='bank_account_modal_remove'>
+            <p class='mb-2 modal_bank'>Bank Name: <span class='text-primary'></span></p>
+            <p class='mb-2 modal_branch'>Branch Number: <span class='text-primary'></span></p>
+            <p class='mb-2 modal_account'>Account Number: <span class='text-primary'></span></p>
+          </div>
+        </div>
+        <div class='modal-footer'>
+          <button type='button' class='btn btn-secondary waves-effect' data-bs-dismiss='modal'>Cancel</button>
+          <button type='submit' class='btn btn-primary waves-effect waves-light'>Remove Label</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- end labelRemoveModal -->

@@ -1,4 +1,4 @@
-{% include 'home/partials/header.html' %}
+{% include 'home/partials/head.html' %}
 {% load static %}
 
 <body>
@@ -23,7 +23,7 @@
               <div class='card-body pt-0'> 
                 <div class='auth-logo'>
                   <a href="{% url 'home:index' %}" class='auth-logo-dark'>
-                    <div class='avatar-md profile-user-wid mb-4'>
+                    <div class='avatar-md profile-user-wid mb-2'>
                       <span class='avatar-title rounded-circle bg-light'>
                         <img src="{% static 'home/images/logo.svg' %}" alt='' height='40'>
                       </span>
@@ -31,7 +31,12 @@
                   </a>
                 </div>
                 <div class='p-2'>
-                  <form class='form-horizontal needs-validation' action='.' novalidate method='post'>
+                  {% if success %}
+                    <div class='alert alert-success' role='alert'>{{ success }}</div>
+                  {% elif error %}
+                    <div class='alert alert-danger' role='alert'>{{ error }}</div>
+                  {% endif %}
+                  <form class='form-horizontal needs-validation' action="{% url 'home:index_auth' %}" novalidate method='post'>
                     {% csrf_token %}
                     <div class='mb-3'>
                       <label for='use_login' class='form-label'>Email</label>
@@ -62,7 +67,7 @@
           <div class='mt-4 text-center'>
             <div>
               <p>Don't have an account ? <a href="{% url 'home:register' %}" class='fw-medium text-primary'> Signup now</a></p>
-              <p>© <script>document.write(new Date().getFullYear())</script> <i class='mdi mdi-heart text-danger'></i> don't fall asleep.</p>
+              <p>© <script>document.write(new Date().getFullYear())</script> <i class='mdi mdi-heart text-danger'></i> financial spreadsheet.</p>
             </div>
           </div>
         </div>
@@ -70,4 +75,5 @@
     </div>
   </div>
 </body>
+
 {% include 'home/partials/footer.html' %}
