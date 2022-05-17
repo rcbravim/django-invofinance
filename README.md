@@ -1,4 +1,4 @@
-# Invo Finance Spreadsheet
+# Invo Financial Spreadsheet
 
 Invo Finance Spreadsheet is an opensource personal finance spreadsheet developed on Django that helps individual users keep track of their financial income and expenses on a monthly basis.
 
