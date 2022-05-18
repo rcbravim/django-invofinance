@@ -25,9 +25,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'INSECURE')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.environ.get('DEBUG') == '1' else False
+DEBUG = os.environ.get('DEBUG', True)
 
-ALLOWED_HOSTS: List[str] = []
+ALLOWED_HOSTS: List[str] = [
+    '*',
+    # 'dashboard.invo.club',
+    # 'localhost',
+    # '127.0.0.1'
+]
 
 
 # Application definition
