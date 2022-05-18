@@ -5,6 +5,7 @@
 __pycache__
 db.sqlite3
 media
+static
 
 # Backup files #
 *.bak
@@ -100,5 +101,12 @@ GitHub.sublime-settings
 !.vscode/extensions.json
 .history
 
-# Others
+# Personal additions
+__pycache__/
+*.pyc
+__localcode
+.DS_Store
+local_settings.py
+_local_settings.py
 deploy/
+gunicorn-error-log
