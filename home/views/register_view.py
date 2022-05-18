@@ -12,7 +12,7 @@ from library.utils.logs import userlog
 from library.utils.output_handle import (email_valid_output,
                                          password_valid_output)
 
-MAX_ATTEMPTS = int(os.environ.get('MAX_ATTEMPTS', 3))
+MAX_ATTEMPTS = int(os.getenv('MAX_ATTEMPTS', 3))
 
 
 class RegisterView(View):

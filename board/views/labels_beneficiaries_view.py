@@ -15,7 +15,7 @@ from library.utils.logs import userlog
 from library.utils.output_handle import general_valid_output
 from slugify import slugify
 
-PG_LIMIT = int(os.environ.get('PG_LIMIT', 25))
+PG_LIMIT = int(os.getenv('PG_LIMIT', 25))
 
 
 class LabelsBeneficiariesView(View):

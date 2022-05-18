@@ -19,8 +19,8 @@ def auth_check(func) -> dict:
                     # check if credentials are up to date
                     payload = jwt.decode(
                         jwt=self.request.session['auth'],
-                        key=os.environ.get('JWT_SECRET', 'INSECURE'),
-                        algorithms=[os.environ.get('JWT_ALGORITHM', 'INSECURE')]  # noqa: E501
+                        key=os.getenv('JWT_SECRET', 'INSECURE'),
+                        algorithms=[os.getenv('JWT_ALGORITHM', 'INSECURE')]  # noqa: E501
                     )
 
                     # renew credentials
