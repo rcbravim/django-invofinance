@@ -33,7 +33,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-##### Load data to preload Database
+##### Load data to MariaDB Database
 Load data to country and state tables using json files in "board/fixtures" folder. please check below command for reference.
 
 ```bash
